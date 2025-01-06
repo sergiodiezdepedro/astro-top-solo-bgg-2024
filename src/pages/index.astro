@@ -1,0 +1,60 @@
+---
+import Header  from "../components/Header.astro";
+import Article from "../components/Article.astro";
+import Footer from '../components/Footer.astro';
+import {articles150} from "../data/articles.js";
+import {articles51100} from "../data/articles.js";
+import {articles101150} from "../data/articles.js";
+import {articles151200} from "../data/articles.js";
+import {articles201250} from "../data/articles.js";
+import {articles251300} from "../data/articles.js";
+
+const title = "Top 300 Solitarios BGG 2024";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section id="150">
+        {articles150.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+      <section id="51100">
+        {articles51100.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+      <section id="101150">
+        {articles101150.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+      <section id="151200">
+        {articles151200.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+      <section id="201250">
+        {articles201250.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+      <section id="251300">
+        {articles251300.map((article) => (
+          <Article {...article} />
+        ))}
+      </section>
+    </main>
+	<Footer />
+  </body>
+</html>
+

@@ -1,0 +1,15 @@
+---
+const { position, iconVariation, variation, title, url } = Astro.props;
+---
+<article>
+  <div class="position">
+    <p>{position}</p>
+  </div>
+  <div class="variation">
+    <p>{iconVariation}</p>
+    <p>{variation}</p>
+  </div>
+  <h2>
+    <a href={url} class="section__link">{title}</a>
+  </h2>
+</article>
